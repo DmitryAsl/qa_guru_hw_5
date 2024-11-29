@@ -46,7 +46,7 @@ def test_full_content_form():
     browser.element("#submit").click()
 
     # проверка таблицы заполненных полей
-    # альтертанивная проверка для полей - browser.element(f'//tr[td[1][text()="Mobile"]]/td[2][text()="{mobile}"]').should(be.visible)
+    # альтернативная проверка для полей - browser.element(f'//tr[td[1][text()="Mobile"]]/td[2][text()="{mobile}"]').should(be.visible)
     browser.all('tr').element_by(have.text('Student Name')).should(have.text(f'{firstName} {lastName}'))
     browser.all('tr').element_by(have.text('Student Email')).should(have.text(email))
     browser.all('tr').element_by(have.text('Gender')).should(have.text(gender))
