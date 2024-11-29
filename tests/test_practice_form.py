@@ -20,6 +20,7 @@ picture_path = os.path.abspath(f'../data/{picture}')
 
 
 def test_full_content_form():
+    browser.open('/automation-practice-form')
     # заполнение всех полей формы
     browser.element('#firstName').type(firstName)
     browser.element('#lastName').type(lastName)
